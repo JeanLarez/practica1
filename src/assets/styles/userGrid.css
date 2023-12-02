@@ -1,0 +1,16 @@
+.users {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button-users {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.cards-users {
+  display: flex;
+  justify-content: center;
+}
