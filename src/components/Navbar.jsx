@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "../Context";
+import { Link } from "react-router-dom";
 import "../assets/styles/navbar.css";
 
 const Navbar = () => {
@@ -10,16 +11,16 @@ const Navbar = () => {
       <nav>
         <ul className="menu">
           <li>
-            <a href="">Inicio</a>
+            <Link to={"/"}>Inicio</Link>
           </li>
           <li>
-            <a href="">Sobre Nosotros</a>
+            <Link to={"/contador"}>Contador</Link>
           </li>
           <li>
-            <a href="">Servicios</a>
+            <Link to={"/usuarios"}>Usuarios</Link>
           </li>
           <li>
-            <a href="">Ubicación</a>
+            <Link to={"/registro"}>Registro</Link>
           </li>
           <li>
             <input
