@@ -1,7 +1,9 @@
 import { useState } from "react";
-import "../assets/styles/form.css";
+import { FormGroup, FloatingLabel, FormControl } from "react-bootstrap";
+// import "../assets/styles/form.css";
+import Form from 'react-bootstrap/Form';
 
-const Form = () => {
+const Formulario = () => {
   const [persona, setPersona] = useState({
     nombre: "",
     apellido: "",
@@ -28,48 +30,56 @@ const Form = () => {
   }
 
   return (
-    <div className="formContainer">
-      <form action="" className="form">
+    <Form className="container mt-5 w-25 bg-info p-5 rounded-4">
+      <FormGroup action="" className="form">
         <h4>Ejemplo de Formulario (Tomar valores del input)</h4>
-        <div>
-          <label htmlFor="nombre">Nombre</label>
-          <input
+        <FloatingLabel
+          controlId="floatingInputName"
+          label="Name"
+          className="mb-3"
+        >
+          <FormControl
             type="text"
             id="nombre"
             value={persona.nombre}
             onChange={handleChangeName}
-            placeholder="Ejemplo: Juan"
+            placeholder="Name"
           />
-        </div>
-        <div>
-          <label htmlFor="apellido">Apellido</label>
-          <input
+        </FloatingLabel>
+        <FloatingLabel controlId="floatingInputLastName"
+          label="Lastname"
+          className="mb-3">
+          
+          <FormControl
             type="text"
             id="apellido"
             value={persona.apellido}
             onChange={handleChangeLastName}
-            placeholder={"Ejemplo: Perez"}
+            placeholder="Lastname"
           />
-        </div>
+        </FloatingLabel>
 
-        <div>
-          <label htmlFor="correo">Correo Electrónico</label>
-          <input
+        <FloatingLabel 
+        controlId="floatingInputEmail"
+        label="Email"
+        className="mb-3"
+        >
+          <FormControl
             type="email"
             id="correo"
             value={persona.correo}
             onChange={handleChangeCorreo}
             placeholder="ejemplo@correo.com"
           />
-        </div>
-      </form>
+        </FloatingLabel>
+      </FormGroup>
 
       <h2>
         {persona.nombre} {persona.apellido}
       </h2>
       <h2>{persona.correo}</h2>
-    </div>
+    </Form>
   );
 };
 
-export default Form;
+export default Formulario;

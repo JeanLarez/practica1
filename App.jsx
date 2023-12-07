@@ -4,7 +4,7 @@ import Navbar from "./src/components/Navbar"
 import Grid from "./src/components/Grid"
 import Contador from "./src/components/Contador"
 import UserGrid from "./src/components/UserGrid"
-import Form from "./src/components/Form"
+import Formulario from "./src/components/Form"
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
         <Route path="/" element={<Grid />} />
         <Route path="/contador" element={<Contador />} />
         <Route path="/usuarios" element={<UserGrid />} />
-        <Route path="/registro" element={<Form />} />
+        <Route path="/registro" element={<Formulario />} />
         <Route path="*" element={<Grid />} />
       </Routes>
 
